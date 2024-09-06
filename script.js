@@ -3,8 +3,9 @@ const avanca = document.querySelectorAll9('.btn-proximo');
 avanca.forEach(button => {
     button.addEventListener('clik',function (){
         const atual = document.querySelector('.ativo');
-        const proximoPasso ='passo-' + this.getAttribute( 'date-proximo');
+        const proximoPasso ='passo-' + this.getAttribute ('data-proximo');
 
-        atual.classList
+        atual.classList.remove('ativo');
+        document.getElementById(proximoPasso).classList.add('ativo');
     })
 })
